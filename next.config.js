@@ -1,5 +1,4 @@
-/** @type {import('next').NextConfig} */
-const webpack = require('webpack');
+import webpack from 'webpack';
 
 const nextConfig = {
   webpack: (config) => {
@@ -13,4 +12,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
