@@ -25,6 +25,6 @@
       "@/*": ["./src/*"]
     }
   },  
-  "include": ["src", "site.config.js"],
+  "include": ["src", "site.config.js", "vite-env.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 } 
