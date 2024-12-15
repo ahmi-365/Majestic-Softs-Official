@@ -1,0 +1,275 @@
+/* Apply the shadow to the entire page background */
+html{
+  scroll-behavior: smooth;
+  cursor: default;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  position: relative; /* Creates a new stacking context */
+  scroll-behavior: smooth;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.font-custom {
+  font-family: 'Poppins', sans-serif; /* Use the selected Google Font */
+  letter-spacing: 0.5px; /* Adds slight spacing between letters */
+  color: #ffffff; /* Add a stylish purple color for branding */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add subtle text shadow */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.font-custom:hover {
+  color: #4B0082; /* Slightly darker purple on hover */
+}
+
+/* App.css */
+/* Hide scrollbar in WebKit browsers (e.g., Chrome, Safari) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar in Internet Explorer */
+html, body {
+  -ms-overflow-style: none; /* IE */
+}
+
+/* Hide scrollbar in Firefox */
+html {
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Scroll Progress Bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background-color: #007bff;
+  width: 0%;
+  z-index: 999;
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none; /* Initially hidden */
+  z-index: 1000;
+}
+
+.scroll-to-top:hover {
+  background-color: #e03b2b;
+}
+
+.scroll-to-top.show {
+  display: block;
+}
+
+/* Hide scrollbar but allow scrolling */
+.custom-scroll::-webkit-scrollbar {
+  display: none; /* Hides scrollbar */
+}
+
+.custom-scroll {
+  -ms-overflow-style: none;  /* For Internet Explorer */
+  scrollbar-width: none;     /* For Firefox */
+}
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(0px); /* Slide in from top */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0); /* Start from the current position */
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0px); /* Slide out to the top */
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.4s ease-in forwards;
+}
+
+.animate-slideOut {
+  animation: slideOut 0.4s ease-out forwards;
+  pointer-events: none; /* Disable interaction */
+}
+
+
+.shadow {
+  position: fixed; /* Fixed position to cover the entire viewport */
+  background: rgba(128, 0, 128, 0.3); /* Purple background with some transparency */
+  border-radius: 24px;
+  rotate: 35deg;
+  z-index: -1;
+  width: 40vw; /* Make the shadow span the full width of the viewport */
+  height: 30vh; /* Make the shadow span the full height of the viewport */
+  top: 8;
+  right: 0;
+  filter: blur(150px);
+  will-change: transform;
+  animation: shadow-slide infinite 3s linear alternate;
+}
+
+@keyframes shadow-slide {
+  from {
+    background: rgba(128, 0, 128, 0.2); /* Light purple */
+    right: 460px;
+  }
+  to {
+    background: rgba(128, 0, 128, 0.8); /* Darker purple */
+    right: 160px;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 1024px) {
+  .shadow {
+    top: 70px; /* Adjust for smaller screens */
+  }
+
+  @keyframes shadow-slide {
+    from {
+      background: rgba(128, 0, 128, 0.2); /* Light purple */
+      right: 460px;
+    }
+    to {
+      background: rgba(128, 0, 128, 0.5); /* Darker purple */
+      right: 160px;
+    }
+  }
+}
+
+.shadow-white {
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.15); /* Reduced shadow intensity */
+}
+.shadow-glow {
+  box-shadow: 0 0 10px rgba(241, 103, 244, 0.7); /* White glow */
+}
+
+@media (max-width: 768px) {
+  .shadow {
+    top: 70px;
+    width: 100px;
+    height: 350px;
+    filter: blur(60px);
+  }
+
+  @keyframes shadow-slide {
+    from {
+      background: rgba(236, 132, 236, 0.2); /* Light purple */
+      right: 280px;
+    }
+    to {
+      background: rgba(209, 33, 209, 0.3); /* Slightly darker purple */
+      right: 100px;
+    }
+  }
+}
+/* ScrollToTop.css */
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999; /* Ensure it's always above other elements */
+  background-color: #007bff; /* Customize background color */
+  color: white; /* Button text color */
+  border-radius: 50%;
+  padding: 10px 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 24px;
+  display: none; /* Initially hidden */
+}
+
+/* When the button is visible, add the `display` style in JavaScript */
+.scroll-to-top-btn.visible {
+  display: block;
+}
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.contact-form h2 {
+  margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form button {
+  padding: 0.7rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+.success-message {
+  color: green;
+}
+
+.error-message {
+  color: red;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 768px) {
+  .services-hover {
+    position: absolute;
+    top: 100%; /* Below the trigger link */
+    left: 0;
+    width: 100%; /* Take full width for better usability */
+    background: var(--color-background);
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-lg);
+    z-index: 50;
+  }
+}

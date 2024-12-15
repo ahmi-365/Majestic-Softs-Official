@@ -1,0 +1,16 @@
+.dark .contact {
+ position: fixed;
+ background: rgba(128, 0, 128, 0.3);
+ border-radius: 24px;
+ rotate: 35deg;
+ z-index: 1; /* Positive z-index */
+ width: 40vw;
+ height: 30vh;
+ top: 8px;
+ right: 0;
+ pointer-events: none;
+
+ filter: blur(150px);
+ will-change: transform;
+ animation: shadow-slide infinite 3s linear alternate;
+}
