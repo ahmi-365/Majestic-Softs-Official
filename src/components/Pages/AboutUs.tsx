@@ -8,6 +8,7 @@ import { Expertise } from '../Expertise';
 import { Testimonials } from '../TestimonialsAbout';
 import { TeamMember } from '../TeamMember';
 import { Contact } from '../Contact';
+import { AnimatedBeamDemo } from '../AnimatedBeam';
 
 export default function AboutUsAi() {
   return (
@@ -16,6 +17,7 @@ export default function AboutUsAi() {
   <div className="min-h-screen ">
       <Hero />
       <Mission />
+      <AnimatedBeamDemo/>
       <Journey />
       <Values />
       
