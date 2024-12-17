@@ -387,7 +387,7 @@ export const Navbar = () => {
     { href: "/#services", label: "Services" },
     { href: "/#testimonials", label: "Testimonials" },
     { href: "/aboutUs", label: "About Us" },
-    { href: "/#faq", label: "FAQ" },
+    { href: "/blogs", label: "Blogs" },
   ];
 
   // List of Services

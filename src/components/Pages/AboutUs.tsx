@@ -6,7 +6,6 @@ import { Stats } from '../Stats';
 import { Process } from '../Process';
 import { Expertise } from '../Expertise';
 import { TestimonialsAbout } from '../TestimonialsAbout';
-import { Contact } from '../Contact';
 import { AnimatedBeamDemo } from '../AnimatedBeam';
 import TeamAbout from '../TeamAbout';
 
@@ -45,7 +44,6 @@ export default function AboutUsAi() {
       
      <TeamAbout/>
 
-      <Contact />
     </div>
     </>
   );

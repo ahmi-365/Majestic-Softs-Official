@@ -1,3 +1,4 @@
+import { TeamCard } from "./TeamCard"
 
 const TeamAbout = () => {
   return (
@@ -15,8 +16,8 @@ const TeamAbout = () => {
 Experienced professionals driving innovation and excellence
 </p>
          
-          <div className="mt-16 grid gap-8 md:grid-cols-3">
-           
+          <div className="mt-16 ">
+          <TeamCard/>
           </div>
         </div>
       </section>
