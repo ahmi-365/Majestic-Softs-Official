@@ -20,27 +20,27 @@ import { ToastContainer } from 'react-toastify';
 import { HelmetProvider } from 'react-helmet-async';
 import AboutUsAi from "./components/Pages/AboutUs";
 import NotFound from "./components/Pages/404NotFound";
-import NoInternet from "./components/Pages/NoInternet"; // Import the NoInternet component
-import { useState, useEffect } from "react";
+// import NoInternet from "./components/Pages/NoInternet"; // Import the NoInternet component
+// import { useState, useEffect } from "react";
 
 function App() {
-  const [isOnline, setIsOnline] = useState(navigator.onLine);
+  // const [isOnline, setIsOnline] = useState(navigator.onLine);
 
-  useEffect(() => {
-    const handleOnlineStatus = () => setIsOnline(navigator.onLine);
+  // useEffect(() => {
+  //   const handleOnlineStatus = () => setIsOnline(navigator.onLine);
 
-    window.addEventListener("online", handleOnlineStatus);
-    window.addEventListener("offline", handleOnlineStatus);
+  //   window.addEventListener("online", handleOnlineStatus);
+  //   window.addEventListener("offline", handleOnlineStatus);
 
-    return () => {
-      window.removeEventListener("online", handleOnlineStatus);
-      window.removeEventListener("offline", handleOnlineStatus);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("online", handleOnlineStatus);
+  //     window.removeEventListener("offline", handleOnlineStatus);
+  //   };
+  // }, []);
 
-  if (!isOnline) {
-    return <NoInternet />; // Show NoInternet page if offline
-  }
+  // if (!isOnline) {
+  //   return <NoInternet />; // Show NoInternet page if offline
+  // }
 
   return (
     <HelmetProvider>

@@ -1,5 +1,4 @@
 import React from 'react';
-import Lamp from './ui/Lamp';
 
 export const Hero: React.FC = () => {
   return (
@@ -28,7 +27,7 @@ export const Hero: React.FC = () => {
     </div>
     {/* Lamp Section */}
     <div className=" flex justify-center mt-[-70px] lg:mb-0">
-            <Lamp />
+            {/* <Lamp /> */}
           </div>
   </div>
 </section>
