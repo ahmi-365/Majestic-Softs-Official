@@ -115,34 +115,32 @@ export const Navbar = () => {
                 <App3 />{" "}
               </div>
               <div>
-              <p className="font-semibold text-gray-200 group-hover:text-purple-600 truncate">
-  App Innovation
-</p>
-<p className="text-sm text-gray-400">
-Develop cross-platform mobile apps using Flutter or React Native, Ionic, Xamarin, NativeScript,.
-</p>
-
+                <p className="font-semibold text-gray-200 group-hover:text-purple-600 truncate">
+                  App Innovation
+                </p>
+                <p className="text-sm text-gray-400">
+                  Develop cross-platform mobile apps using Flutter or React
+                  Native, Ionic, Xamarin, NativeScript,.
+                </p>
               </div>
             </div>
-          </a> <a
-                    href="#"
-                    className="block hover:bg-gray-50 p-3 rounded-lg group "
-                  >
-                    <div className="flex items-center gap-x-4">
-                      <div className="bg-gray-100 p-2 rounded-lg group-hover:bg-purple-100">
-                        <Blinds className="w-6 h-6 text-gray-600 group-hover:text-purple-600" />{" "}
-                      </div>
-                      <div>
-                        <p className="font-semibold text-gray-200 group-hover:text-purple-600 truncate">
-                          Hybrid App Development
-                        </p>
-                        <p className="text-sm text-gray-400">
-                          Build apps using Ionic and Capacitor for seamless
-                          integration with web and mobile.
-                        </p>
-                      </div>
-                    </div>
-                  </a>
+          </a>{" "}
+          <a href="#" className="block hover:bg-gray-50 p-3 rounded-lg group ">
+            <div className="flex items-center gap-x-4">
+              <div className="bg-gray-100 p-2 rounded-lg group-hover:bg-purple-100">
+                <Blinds className="w-6 h-6 text-gray-600 group-hover:text-purple-600" />{" "}
+              </div>
+              <div>
+                <p className="font-semibold text-gray-200 group-hover:text-purple-600 truncate">
+                  Hybrid App Development
+                </p>
+                <p className="text-sm text-gray-400">
+                  Build apps using Ionic and Capacitor for seamless integration
+                  with web and mobile.
+                </p>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     ),
@@ -203,26 +201,23 @@ Develop cross-platform mobile apps using Flutter or React Native, Ionic, Xamarin
               </div>
             </div>
           </a>
-          <a
-                      href="#"
-                      className="block hover:bg-gray-50 p-3 rounded-lg group "
-                    >
-                      <div className="flex items-center gap-x-4">
-                        <div className="bg-gray-100 p-2 rounded-lg group-hover:bg-purple-100">
-                          <CopyMinusIcon className="w-6 h-6 text-gray-600 group-hover:text-purple-600" />{" "}
-                          {/* Replace with an appropriate icon for CMS */}
-                        </div>
-                        <div>
-                          <p className="font-semibold text-gray-200 group-hover:text-purple-600">
-                            CMS Solutions
-                          </p>
-                          <p className="text-sm text-gray-400">
-                            Design and manage websites effortlessly with
-                            WordPress, Joomla, or Shopify.
-                          </p>
-                        </div>
-                      </div>
-                    </a>
+          <a href="#" className="block hover:bg-gray-50 p-3 rounded-lg group ">
+            <div className="flex items-center gap-x-4">
+              <div className="bg-gray-100 p-2 rounded-lg group-hover:bg-purple-100">
+                <CopyMinusIcon className="w-6 h-6 text-gray-600 group-hover:text-purple-600" />{" "}
+                {/* Replace with an appropriate icon for CMS */}
+              </div>
+              <div>
+                <p className="font-semibold text-gray-200 group-hover:text-purple-600">
+                  CMS Solutions
+                </p>
+                <p className="text-sm text-gray-400">
+                  Design and manage websites effortlessly with WordPress,
+                  Joomla, or Shopify.
+                </p>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     ),
@@ -449,7 +444,9 @@ Develop cross-platform mobile apps using Flutter or React Native, Ionic, Xamarin
               <a
                 href={route.href}
                 key={i}
-                className={`text-[17px] mb-[-5px] ${buttonVariants({ variant: "ghost" })}`}
+                className={`text-[17px] mb-[-5px] ${buttonVariants({
+                  variant: "ghost",
+                })}`}
                 onMouseEnter={() => {
                   if (route.label === "Services") setIsServicesHovered(true);
                 }}
@@ -466,127 +463,136 @@ Develop cross-platform mobile apps using Flutter or React Native, Ionic, Xamarin
               <ServicesHover setIsServicesHovered={setIsServicesHovered} />
             )}
           </nav>
-        {/* Mobile Navigation */}
-<span className="flex md:hidden">
-  {/* Theme Toggle */}
-  <ModeToggle />
+          {/* Mobile Navigation */}
+          <span className="flex md:hidden">
+            {/* Theme Toggle */}
+            <ModeToggle />
 
-  {/* Navigation Sheet */}
-  <Sheet open={isOpen} onOpenChange={setIsOpen}>
-    <SheetTrigger className="px-2">
-      <Menu className="flex md:hidden h-5 w-5">
-        <span className="sr-only">Menu Icon</span>
-      </Menu>
-    </SheetTrigger>
+            {/* Navigation Sheet */}
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger className="px-2">
+                <Menu className="flex md:hidden h-5 w-5">
+                  <span className="sr-only">Menu Icon</span>
+                </Menu>
+              </SheetTrigger>
 
-    <SheetContent
-      side={"left"}
-      className={`transform transition-transform ease-in-out duration-500 ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
-    >
-      <SheetHeader>
-        <SheetTitle className="font-bold text-xl transition-all ease-in-out duration-500">
-          <a href="#hero" onClick={() => setIsOpen(false)} className="transition-all ease-in-out duration-500">
-            Majestic Softs
-          </a>
-        </SheetTitle>
-      </SheetHeader>
-      <nav className="flex flex-col gap-6 mt-4 items-center justify-center">
-        {/* Show Hamburger Menu Icon or Back Button when Services are Open or Active Service is Present */}
-        {(isServicesMenuOpen || activeService) && (
-          <div className="flex justify-start w-full">
-            <button
-              onClick={() => {
-                if (activeService) {
-                  setActiveService(null); // Reset activeService
-                } else {
-                  setIsServicesMenuOpen(false); // Close the services menu
-                }
-              }}
-              className="flex items-center transition-all duration-500 ease-in-out"
-            >
-              <Menu className="h-7 w-7 text-purple-800 mt-[-60px]" />
-            </button>
-          </div>
-        )}
+              <SheetContent
+                side={"left"}
+                className={`transform transition-transform ease-in-out duration-500 ${
+                  isOpen ? "translate-x-0" : "-translate-x-full"
+                }`}
+              >
+                <SheetHeader>
+                  <SheetTitle className="font-bold text-xl transition-all ease-in-out duration-500">
+                    <a
+                      href="#hero"
+                      onClick={() => setIsOpen(false)}
+                      className="transition-all ease-in-out duration-500"
+                    >
+                      Majestic Softs
+                    </a>
+                  </SheetTitle>
+                </SheetHeader>
+                <nav className="flex flex-col gap-6 mt-4 items-center justify-center">
+                  {/* Show Hamburger Menu Icon or Back Button when Services are Open or Active Service is Present */}
+                  {(isServicesMenuOpen || activeService) && (
+                    <div className="flex justify-start w-full">
+                      <button
+                        onClick={() => {
+                          if (activeService) {
+                            setActiveService(null); // Reset activeService
+                          } else {
+                            setIsServicesMenuOpen(false); // Close the services menu
+                          }
+                        }}
+                        className="flex items-center transition-all duration-500 ease-in-out"
+                      >
+                        <Menu className="h-7 w-7 text-purple-800 mt-[-60px]" />
+                      </button>
+                    </div>
+                  )}
 
-        {/* Home Button (Only Show When Services are Not Open) */}
-        {!isServicesMenuOpen && !activeService && (
-          <a
-            href="#home"
-            onClick={() => setIsOpen(false)}
-            className="text-lg font-medium hover:text-purple-600 transition-all ease-in-out duration-500"
-          >
-            Home
-          </a>
-        )}
+                  {/* Home Button (Only Show When Services are Not Open) */}
+                  {!isServicesMenuOpen && !activeService && (
+                    <a
+                      href="#home"
+                      onClick={() => setIsOpen(false)}
+                      className="text-lg font-medium hover:text-purple-600 transition-all ease-in-out duration-500"
+                    >
+                      Home
+                    </a>
+                  )}
 
-        {/* Services Button (Only Show When Services are Not Open) */}
-        {!isServicesMenuOpen && !activeService && (
-          <button
-            className="text-xl transition-all ease-in-out duration-500"
-            onClick={() => setIsServicesMenuOpen(true)}
-          >
-            Services
-          </button>
-        )}
+                  {/* Services Button (Only Show When Services are Not Open) */}
+                  {!isServicesMenuOpen && !activeService && (
+                    <button
+                      className="text-xl transition-all ease-in-out duration-500"
+                      onClick={() => setIsServicesMenuOpen(true)}
+                    >
+                      Services
+                    </button>
+                  )}
 
-        {/* Conditional Rendering for Active Service */}
-        {activeService ? (
-          <div className="p-4 transition-all ease-in-out duration-500">
-            {servicesDetails[activeService]}
-          </div>
-        ) : (
-          <>
-            {isServicesMenuOpen && (
-              <div className="flex flex-col gap-4 mt-2 transition-all ease-in-out duration-500">
-                {servicesHeadings.map(({ label }) => (
-                  <button
-                    key={label}
-                    onClick={() => handleServiceClick(label)}
-                    className="text-lg font-bold text-purple-800 hover:text-purple-600 transition-all ease-in-out duration-500"
-                  >
-                    {label}
-                  </button>
-                ))}
-              </div>
-            )}
+                  {/* Conditional Rendering for Active Service */}
+                  {activeService ? (
+                    <div className="p-4 transition-all ease-in-out duration-500">
+                      {servicesDetails[activeService]}
+                    </div>
+                  ) : (
+                    <>
+                      {isServicesMenuOpen && (
+                        <div className="flex flex-col gap-4 mt-2 transition-all ease-in-out duration-500">
+                          {servicesHeadings.map(({ label }) => (
+                            <button
+                              key={label}
+                              onClick={() => handleServiceClick(label)}
+                              className="text-lg font-bold text-purple-800 hover:text-purple-600 transition-all ease-in-out duration-500"
+                            >
+                              {label}
+                            </button>
+                          ))}
+                        </div>
+                      )}
 
-            {/* Static Navigation Routes (Excluding Services and Home) */}
-            {!isServicesMenuOpen &&
-              routeList
-                .filter(({ label }) => label !== "Services" && label !== "Home") // Hide the Services and Home buttons from static routes
-                .map(({ href, label }) => (
-                  <a
-                    key={label}
-                    href={href}
-                    onClick={() => setIsOpen(false)}
-                    className="text-lg font-medium hover:text-purple-600 transition-all ease-in-out duration-500"
-                  >
-                    {label}
-                  </a>
-                ))}
-          </>
-        )}
+                      {/* Static Navigation Routes (Excluding Services and Home) */}
+                      {!isServicesMenuOpen &&
+                        routeList
+                          .filter(
+                            ({ label }) =>
+                              label !== "Services" && label !== "Home"
+                          ) // Hide the Services and Home buttons from static routes
+                          .map(({ href, label }) => (
+                            <a
+                              key={label}
+                              href={href}
+                              onClick={() => setIsOpen(false)}
+                              className="text-lg font-medium hover:text-purple-600 transition-all ease-in-out duration-500"
+                            >
+                              {label}
+                            </a>
+                          ))}
+                    </>
+                  )}
 
-        {/* GitHub Link */}
-        <div className="mt-6">
-          <a
-            href="https://github.com/"
-            target="_blank"
-            className={`flex items-center w-[110px] border ${buttonVariants(
-              {
-                variant: "secondary",
-              }
-            )}`}
-          >
-            <GitHubLogoIcon className="w-5 h-5 mr-2" />
-            Github
-          </a>
-        </div>
-      </nav>
-    </SheetContent>
-  </Sheet>
-</span>
+                  {/* GitHub Link */}
+                  <div className="mt-6">
+                    <a
+                      href="https://github.com/"
+                      target="_blank"
+                      className={`flex items-center w-[110px] border ${buttonVariants(
+                        {
+                          variant: "secondary",
+                        }
+                      )}`}
+                    >
+                      <GitHubLogoIcon className="w-5 h-5 mr-2" />
+                      Github
+                    </a>
+                  </div>
+                </nav>
+              </SheetContent>
+            </Sheet>
+          </span>
 
           {/* User Profile and Links */}
           <div className="hidden md:flex gap-2">
