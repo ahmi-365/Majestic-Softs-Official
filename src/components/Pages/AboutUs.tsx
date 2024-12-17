@@ -5,7 +5,7 @@ import { Values } from '../Values';
 import { Stats } from '../Stats';
 import { Process } from '../Process';
 import { Expertise } from '../Expertise';
-import { Testimonials } from '../TestimonialsAbout';
+import { TestimonialsAbout } from '../TestimonialsAbout';
 import { TeamMember } from '../TeamMember';
 import { Contact } from '../Contact';
 import { AnimatedBeamDemo } from '../AnimatedBeam';
@@ -41,7 +41,7 @@ export default function AboutUsAi() {
 
       <Process />
       <Expertise />
-      <Testimonials />
+      <TestimonialsAbout />
       
       {/* Team Section */}
       <section className=" py-24">

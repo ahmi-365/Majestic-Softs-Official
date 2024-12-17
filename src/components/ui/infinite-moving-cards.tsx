@@ -1,7 +1,9 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
+
+// Utility function for conditional classNames
+import { cn } from "@/lib/utils";
 
 export const InfiniteMovingCards = ({
   items,
@@ -16,7 +18,7 @@ export const InfiniteMovingCards = ({
     quote: string;
     title: string;
     comment: string;
-    rating: number; // Added rating field
+    rating: number;
   }[];
   direction?: "left" | "right";
   pauseOnHover?: boolean;
@@ -28,10 +30,12 @@ export const InfiniteMovingCards = ({
   const [start, setStart] = useState(false);
 
   useEffect(() => {
-    initializeAnimation();
+    if (items.length > 0) {
+      initializeAnimation();
+    }
   }, [items]);
 
-  function initializeAnimation() {
+  const initializeAnimation = () => {
     if (containerRef.current && scrollerRef.current) {
       const scrollerContent = Array.from(scrollerRef.current.children);
 
@@ -45,7 +49,7 @@ export const InfiniteMovingCards = ({
       setAnimationSpeed();
       setStart(true);
     }
-  }
+  };
 
   const setAnimationDirection = () => {
     if (containerRef.current) {

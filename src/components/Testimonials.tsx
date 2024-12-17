@@ -1,35 +1,6 @@
 "use client";
 import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
-
-export function Testimonials() {
-  return (
-    <section id="testimonials">
-      <div className="h-[40rem] flex flex-col items-center justify-center relative overflow-hidden ">
-        <h2 className="text-3xl md:text-5xl font-bold text-center leading-tight">
-          Why Businesses
-          <span className="text-[#6A11CB] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-[#F3E9FF] dark:to-[#6A11CB] ml-2">
-            Trust Us Client Success Stories
-          </span>
-        </h2>
-
-        <p className="text-xl text-muted-foreground pt-6 pb-8 text-center max-w-3xl mx-auto">
-          We don't just craft software – we engineer the future. By partnering
-          with forward-thinking organizations, we transform challenges into
-          groundbreaking solutions.
-        </p>
-
-        {/* Scrolling right */}
-        <InfiniteMovingCards
-          items={testimonials}
-          direction="right"
-          className="mb-7"
-        />
-      </div>
-    </section>
-  );
-}
-
-const testimonials = [
+export const testimonials = [
   {
     image: "https://ui-avatars.com/api/?name=John+Doe", // Avatar Generator URL
     name: "John Doe",
@@ -131,3 +102,33 @@ const testimonials = [
     rating: 5,
   },
 ];
+
+export function Testimonials() {
+  return (
+    <section id="testimonials">
+      <div className="h-[40rem] flex flex-col items-center justify-center relative overflow-hidden ">
+        <h2 className="text-3xl md:text-5xl font-bold text-center leading-tight">
+          Why Businesses
+          <span className="text-[#6A11CB] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-[#F3E9FF] dark:to-[#6A11CB] ml-2">
+            Trust Us Client Success Stories
+          </span>
+        </h2>
+
+        <p className="text-xl text-muted-foreground pt-6 pb-8 text-center max-w-3xl mx-auto">
+          We don't just craft software – we engineer the future. By partnering
+          with forward-thinking organizations, we transform challenges into
+          groundbreaking solutions.
+        </p>
+
+        {/* Scrolling right */}
+        <InfiniteMovingCards
+          items={testimonials}
+          direction="right"
+          className="mb-7"
+        />
+      </div>
+
+    </section>
+  );
+}
+
