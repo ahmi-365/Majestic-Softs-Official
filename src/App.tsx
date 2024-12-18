@@ -18,7 +18,7 @@ import "./App.css";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import { HelmetProvider } from "react-helmet-async";
-import AboutUsAi from "./components/Pages/AboutUs";
+import AboutUs from "./components/Pages/AboutUs";
 import NotFound from "./components/Pages/404NotFound";
 // import BlogPage from "./components/Pages/Blogs";
 import { BlogListPage } from "./components/Blogs/pages/BlogListPage";
@@ -71,7 +71,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<BlogListPage />} />
           <Route path="/blog/:slug" element={<BlogPostPage />} />{" "}
-          <Route path="/aboutUs" element={<AboutUsAi />} />
+          <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

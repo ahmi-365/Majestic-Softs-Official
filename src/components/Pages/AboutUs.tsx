@@ -9,7 +9,7 @@ import { TestimonialsAbout } from '../TestimonialsAbout';
 import { AnimatedBeamDemo } from '../AnimatedBeam';
 import TeamAbout from '../TeamAbout';
 
-export default function AboutUsAi() {
+export default function AboutUs() {
   return (
 <>  
 <span className='contact'></span>
