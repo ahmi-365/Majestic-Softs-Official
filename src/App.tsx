@@ -20,7 +20,9 @@ import { ToastContainer } from 'react-toastify';
 import { HelmetProvider } from 'react-helmet-async';
 import AboutUsAi from "./components/Pages/AboutUs";
 import NotFound from "./components/Pages/404NotFound";
-import BlogPage from "./components/Pages/Blogs";
+// import BlogPage from "./components/Pages/Blogs";
+import { BlogListPage } from "./components/Blogs/pages/BlogListPage";
+import { BlogPostPage } from "./components/Blogs/pages/BlogPostPage";
 // import NoInternet from "./components/Pages/NoInternet"; // Import the NoInternet component
 // import { useState, useEffect } from "react";
 
@@ -64,8 +66,8 @@ function App() {
             </>
           } />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/blogs" element={<BlogPage />} />
-          <Route path="/aboutUs" element={<AboutUsAi />} />
+          <Route path="/blog" element={<BlogListPage />} />
+          <Route path="/blog/:slug" element={<BlogPostPage />} />          <Route path="/aboutUs" element={<AboutUsAi />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
