@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { BlogGrid } from '../components/BlogGrid/BlogGrid';
-import { Header } from '../components/Header/Header';
+import { BlogGrid } from '../components/blog/BlogGrid';
+import { Header } from '../components/layout/Header';
 import { fetchBlogPosts } from '../services/api';
 import type { BlogPost } from '../types/blog';
 
