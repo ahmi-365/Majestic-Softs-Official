@@ -15,7 +15,7 @@ export function BlogCard({ post, index }: BlogCardProps) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="group relative overflow-hidden rounded-lg bg-white hover:shadow-xl transition-all duration-300"
+      className="group relative overflow-hidden rounded-lg bg-white dark:bg-black border-2  hover:shadow-xl transition-all duration-300"
     >
       <Link to={`/blog/${post.slug}`}>
         <div className="aspect-video overflow-hidden">
@@ -26,10 +26,10 @@ export function BlogCard({ post, index }: BlogCardProps) {
           />
         </div>
         <div className="p-6">
-          <h2 className="text-xl font-semibold mb-2 group-hover:text-blue-600 transition-colors">
+          <h2 className="text-xl font-semibold mb-2 group-hover:text-purple-500 transition-colors">
             {post.title}
           </h2>
-          <p className="text-gray-600 line-clamp-2 mb-4">{post.content}</p>
+          <p className="text-gray-600 dark:text-gray-400 line-clamp-2 mb-4">{post.content}</p>
           <div className="flex items-center gap-4 text-sm text-gray-500">
             <div className="flex items-center gap-1">
               <User size={16} />

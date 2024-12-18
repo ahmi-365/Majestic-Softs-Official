@@ -15,17 +15,19 @@ export function BlogPostPage() {
   if (!post) return <ErrorMessage message="Post not found" />;
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+    <span className='conhtact'></span>
+    <div className="min-h-screen bg-gray-50 dark:bg-transparent">
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-3xl mx-auto">
           <div className="mb-8">
             <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
             <div className="flex items-center gap-4 text-gray-600">
-              <div className="flex items-center gap-1">
+              <div className="flex items-center gap-1 dark:text-gray-300">
                 <User size={16} />
                 <span>{post.name}</span>
               </div>
-              <div className="flex items-center gap-1">
+              <div className="flex items-center gap-1 dark:text-gray-300">
                 <Calendar size={16} />
                 <span>{formatDate(post.created_at)}</span>
               </div>
@@ -39,10 +41,11 @@ export function BlogPostPage() {
             />
           </div>
           <div className="prose prose-lg max-w-none">
-            <p className="text-lg leading-relaxed text-gray-800">{post.content}</p>
+            <p className="text-lg leading-relaxed text-gray-800 dark:text-gray-300  ">{post.content}</p>
           </div>
         </div>
       </div>
     </div>
+    </>
   );
 }

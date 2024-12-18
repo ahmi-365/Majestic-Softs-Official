@@ -53,11 +53,13 @@ export function BlogPost() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+    <span className=''></span>
+    <div className="min-h-screen bg-white">
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-3xl mx-auto">
           <div className="mb-8">
-            <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
+            <h1 className="text-4xl font-bold mb-4 ">{post.title}</h1>
             <div className="flex items-center gap-4 text-gray-600">
               <div className="flex items-center gap-1">
                 <User size={16} />
@@ -71,8 +73,8 @@ export function BlogPost() {
           </div>
           <div className="aspect-video mb-8 overflow-hidden rounded-lg">
             <img
-              src={`https://source.unsplash.com/1200x800/?blog`}
-              alt={post.title}
+            src={`https://blog.shockfit.hr/storage/${post.image}`}
+            alt={post.title}
               className="w-full h-full object-cover"
             />
           </div>
@@ -82,5 +84,6 @@ export function BlogPost() {
         </div>
       </div>
     </div>
+    </>
   );
 }
