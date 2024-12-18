@@ -15,9 +15,9 @@ import Contact from "./components/Pages/ContactForm";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./App.css";
-import 'react-toastify/dist/ReactToastify.css'; 
-import { ToastContainer } from 'react-toastify';
-import { HelmetProvider } from 'react-helmet-async';
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
+import { HelmetProvider } from "react-helmet-async";
 import AboutUsAi from "./components/Pages/AboutUs";
 import NotFound from "./components/Pages/404NotFound";
 // import BlogPage from "./components/Pages/Blogs";
@@ -51,23 +51,27 @@ function App() {
         <Navbar />
         <ScrollToTop />
         <Routes>
-          <Route path="/" element={
-            <>
-              <Hero />
-              <HowItWorks />
-              <About />
-              <Services />
-              <Testimonials />
-              <Team />
-              <Cta />
-              <Newsletter />
-              <FAQ />
-              <ToastContainer />
-            </>
-          } />
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <HowItWorks />
+                <About />
+                <Services />
+                <Testimonials />
+                <Team />
+                <Cta />
+                <Newsletter />
+                <FAQ />
+                <ToastContainer />
+              </>
+            }
+          />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<BlogListPage />} />
-          <Route path="/blog/:slug" element={<BlogPostPage />} />          <Route path="/aboutUs" element={<AboutUsAi />} />
+          <Route path="/blog/:slug" element={<BlogPostPage />} />{" "}
+          <Route path="/aboutUs" element={<AboutUsAi />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

@@ -55,7 +55,7 @@ export function BlogPost() {
   return (
     <>
     <span className=''></span>
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-black">
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-3xl mx-auto">
           <div className="mb-8">
@@ -71,7 +71,7 @@ export function BlogPost() {
               </div>
             </div>
           </div>
-          <div className="aspect-video mb-8 overflow-hidden rounded-lg">
+          <div className="aspect-video mb-8 overflow-hidden dark:bg-black rounded-lg">
             <img
             src={`https://blog.shockfit.hr/storage/${post.image}`}
             alt={post.title}

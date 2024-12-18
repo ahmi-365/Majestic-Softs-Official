@@ -1,19 +1,22 @@
 "use client";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
-import { Cover } from "@/components/ui/cover";
 import { buttonVariants } from "./ui/button";
 import { HeroCards } from "./HeroCards";
 import { AceternityLogo } from "./Icons";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import Typewriter from './ui/typewriter-effect'
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
 const words = `          Innovative software solutions to drive your business forward.
 
 `;
 
+
+
 export const Hero = () => {
   return (
     <section id="home"
      className="container grid lg:grid-cols-2 place-items-center gap-10 ">
+      
       {/* Left side content */}
       <div className="text-center lg:text-start space-y-6">
         <main className="text-5xl md:text-6xl font-bold">
@@ -22,14 +25,23 @@ export const Hero = () => {
               Empowering brands
               <br />
             </span>
-            with strategic
+            with  strategic
             <br /> vision
           </h1>{" "}
-        <span className="mb-9">  and </span><br />
+        <span className="mb-9">And  </span><br />
           <h2 className="inline">
-            <span className="inline mr-4 text-[#6A11CB]  dark:text-transparent dark:bg-clip-text  dark:bg-gradient-to-r dark:from-[#F3E9FF] dark:to-primary/80 ">
-            <Cover> flawless execution</Cover>
-            </span>
+          <span className=" text-[#6A11CB] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-[#F3E9FF] dark:to-primary/80">
+      {/* <Typewriter
+        words={[ 'Execute Flawlessly','Think Big','Plan Smart' ]}
+        loop={true} // Set to true if you want it to loop
+
+        typeSpeed={70}
+        deleteSpeed={50}
+        delaySpeed={1000}
+      /> */}
+      <Typewriter/>
+      
+    </span>
           </h2>
         </main>           
 

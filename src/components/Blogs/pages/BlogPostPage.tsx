@@ -16,7 +16,7 @@ export function BlogPostPage() {
 
   return (
     <>
-    <span className='conhtact'></span>
+    <span className=''></span>
     <div className="min-h-screen bg-gray-50 dark:bg-transparent">
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-3xl mx-auto">
