@@ -12,14 +12,29 @@ export function BlogPost() {
 
   useEffect(() => {
     const loadPost = async () => {
-      const posts = await fetchBlogPosts();
-      const foundPost = posts.find((p) => p.slug === slug);
-      setPost(foundPost || null);
-      setLoading(false);
+      try {
+        const posts = await fetchBlogPosts();
+        console.log('Posts fetched:', posts);
+  
+        if (!Array.isArray(posts)) {
+          console.error('Invalid response format:', posts);
+          throw new Error('API did not return an array');
+        }
+  
+        const foundPost = posts.find((p) => p.slug === slug);
+        console.log('Found post:', foundPost);
+        setPost(foundPost || null);
+      } catch (error) {
+        console.error('Error loading post:', error);
+        setPost(null);
+      } finally {
+        setLoading(false);
+      }
     };
-
+  
     loadPost();
   }, [slug]);
+  
 
   if (loading) {
     return (

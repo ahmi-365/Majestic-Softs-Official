@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Calendar, User } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import type { BlogPost } from '../../types/blog';
-import { formatDate, getImageUrl } from '../../lib/utils';
+import { formatDate } from '../../lib/utils';
 
 interface BlogCardProps {
   post: BlogPost;
