@@ -54,7 +54,7 @@ export const Expertise: React.FC = () => {
     <section className=" py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-200 sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-700 dark:text-gray-200 sm:text-4xl">
             Our Expertise
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-400">

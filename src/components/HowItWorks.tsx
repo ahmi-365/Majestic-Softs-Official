@@ -56,9 +56,9 @@ export const HowItWorks = () => {
   return (
     <section id="howItWorks" className="container text-center py-24 sm:py-32 pb-32">
       <h2 className="text-3xl md:text-4xl font-bold">
-        Our{" "}
+        Our
         <span className="text-[#6A11CB] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-[#F3E9FF] dark:to-[#6A11CB] ms-4">
-          Expertise at a Glance
+        Expertise at a Glance
         </span>
       </h2>
       <p className="md:w-3/4 mx-auto mt-4 mb-8 text-xl text-muted-foreground">

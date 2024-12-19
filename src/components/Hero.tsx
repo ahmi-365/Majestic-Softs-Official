@@ -6,11 +6,7 @@ import { AceternityLogo } from "./Icons";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { Typewriter } from "./typewriter/MainTypeWriter";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
-// const words = `          Innovative software solutions to drive your business forward.
-
-// `;
 const words = ["Execute Flawlessly", "Think Big", "Plan Smart"];
-
 export const Hero = () => {
   return (
     <section
@@ -30,23 +26,20 @@ export const Hero = () => {
           </h1>{" "}
           <span className="mb-9">And </span>
           <br />
-                  <h2 className=" inline text-[#6A11CB] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-[#F3E9FF] dark:to-primary/80">
-                    <Typewriter
-                      words={words}
-                      className=""
-                      typingSpeed={100}
-                      deletingSpeed={50}
-                      delayBetweenWords={2000}
-                    />
-                  </h2>
+          <h2 className=" inline text-[#6A11CB] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-[#F3E9FF] dark:to-primary/80">
+            <Typewriter
+              words={words}
+              className=""
+              typingSpeed={100}
+              deletingSpeed={50}
+              delayBetweenWords={2000}
+            />
+          </h2>
         </main>
 
         <span className="text-xl text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
-          {/* <TextGenerateEffect words={words} /> */}
+          <TextGenerateEffect words="Innovative software solutions to drive your business forward." />
         </span>
-        {/* <p className="text-xl text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
-          Innovative software solutions to drive your business forward.
-        </p> */}
 
         {/* Buttons section - Aligning the buttons side by side */}
         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 items-center">
